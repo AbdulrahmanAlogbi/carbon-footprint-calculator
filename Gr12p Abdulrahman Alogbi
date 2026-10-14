@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator - Abdulrahman Alogbi 12P</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .main-card {
+      border: 2px solid #198754;
+      border-radius: 8px;
+    }
+    .main-card-header {
+      background-color: #198754;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+    }
+    .nav-tabs .nav-link.active {
+      font-weight: bold;
+      color: #198754;
+    }
+    .calculate-btn {
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid my-4 px-4">
+    <!-- Student Information Banner -->
+    <div class="alert alert-secondary text-center fw-bold py-2 mb-4">
+      Student Name: Abdulrahman Alogbi | Class: 12P
+    </div>
+
+    <!-- 1. Main Heading (h1) -->
+    <h1 class="text-center mb-2 fw-bold text-dark">Carbon Footprint Calculator</h1>
+
+    <!-- 2. Subheading (h2) -->
+    <h2 class="text-center text-danger mb-4 fs-3">Climate change is real!!</h2>
+
+    <!-- 3. Introduction Paragraph (p) -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-4">
+        <p class="lead text-muted">
+          Welcome to the Carbon Footprint Calculator. Every daily activity—from the energy we use at home to the mode of transportation we choose—contributes to greenhouse gas emissions. Measuring your carbon footprint is the first crucial step toward taking action to protect our environment and secure a sustainable future.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4. Image (img) -->
+    <div class="text-center mb-4">
+      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" 
+           alt="Environmental Sustainability" 
+           class="img-fluid rounded shadow-sm" 
+           style="max-height: 280px; object-fit: cover;">
+    </div>
+
+    <!-- 5. Secondary Heading (h4) -->
+    <h4 class="text-center text-success mb-3 fw-bold">Assess Your Environmental Impact Today</h4>
+
+    <!-- 6. Supporting Paragraph (p) -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-4">
+        <p class="text-secondary">
+          By filling out the interactive form below across energy, transport, food, and consumption habits, you can calculate your estimated annual carbon footprint in metric tons of CO₂ equivalent. Take control of your impact and discover simple ways to live more sustainably!
+        </p>
+      </div>
+    </div>
+
+    <!-- 7. Calculate Button using a styled hyperlink (a) -->
+    <div class="text-center mb-5">
+      <a href="#calculator-section" class="btn btn-primary btn-lg calculate-btn px-5 shadow-sm">Calculate Now</a>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- 8. Interactive Form Section -->
+    <div id="calculator-section" class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <!-- Navigation Tabs Bar -->
+        <ul class="nav nav-tabs justify-content-between align-items-center mb-3" id="calcTabs" role="tablist">
+          <div class="d-flex flex-wrap">
+            <li class="nav-item">
+              <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button">General</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button">Home</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="travel-tab" data-bs-toggle="tab" data-bs-target="#travel" type="button">Travel</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="food-tab" data-bs-toggle="tab" data-bs-target="#food" type="button">Food</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="electronics-tab" data-bs-toggle="tab" data-bs-target="#electronics" type="button">Electronic usage</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="shopping-tab" data-bs-toggle="tab" data-bs-target="#shopping" type="button">Shopping</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="result-tab" data-bs-toggle="tab" data-bs-target="#result" type="button">Result</button>
+            </li>
+          </div>
+          <li class="nav-item ms-auto">
+            <span class="badge bg-success fs-6 px-3 py-2">Home</span>
+          </li>
+        </ul>
+
+        <!-- Card Container -->
+        <div class="card main-card shadow-sm mb-5">
+          <!-- Card Header -->
+          <div class="main-card-header">
+            Fill the form below
+          </div>
+
+          <!-- Card Body with Hidden/Visible Tab Forms -->
+          <div class="card-body p-4">
+            <div class="tab-content" id="calcTabContent">
+
+              <!-- Tab 1: General -->
+              <div class="tab-pane fade show active" id="general">
+                <form>
+                  <div class="mb-3 row">
+                    <label for="userName" class="col-sm-3 col-form-label fw-bold">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="userName" value="Abdulrahman Alogbi">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="userAge" class="col-sm-3 col-form-label fw-bold">Age</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control" id="userAge" placeholder="Enter your age" value="18">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="userCountry" class="col-sm-3 col-form-label fw-bold">Country</label>
+                    <div class="col-sm-9">
+                      <select class="form-select" id="userCountry">
+                        <option selected value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="UAE">United Arab Emirates</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 2: Home -->
+              <div class="tab-pane fade" id="home">
+                <form>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">Monthly Electricity (kWh)</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="elecUsage" value="400">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">Air Conditioning Hours/Day</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="acHours" value="8">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 3: Travel -->
+              <div class="tab-pane fade" id="travel">
+                <form>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">Weekly Car Distance (km)</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="carKm" value="150">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">Flights Per Year</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="flightsCount" value="2">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 4: Food -->
+              <div class="tab-pane fade" id="food">
+                <form>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">Dietary Type</label>
+                    <div class="col-sm-8">
+                      <select class="form-select" id="dietType">
+                        <option value="meat">Meat Heavy</option>
+                        <option value="balanced" selected>Balanced Diet</option>
+                        <option value="vegetarian">Vegetarian</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 5: Electronic usage -->
+              <div class="tab-pane fade" id="electronics">
+                <form>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">Daily Gaming / PC Hours</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="gamingHours" value="4">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 6: Shopping -->
+              <div class="tab-pane fade" id="shopping">
+                <form>
+                  <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label fw-bold">New Items Purchased / Month</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="shoppingItems" value="3">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab 7: Result -->
+              <div class="tab-pane fade text-center" id="result">
+                <h3 class="text-success fw-bold mb-3">Your Estimated Carbon Footprint</h3>
+                <div class="display-4 fw-bold text-dark my-3" id="totalResult">4.2 Tons CO₂/year</div>
+                <p class="text-muted" id="resultMsg">Your footprint is within the average range for your region.</p>
+                <button class="btn btn-outline-success mt-2" type="button" onclick="calculateFootprint()">Recalculate</button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card Footer with Prev / Next Navigation Buttons -->
+          <div class="card-footer bg-light d-flex justify-content-center gap-2 py-3">
+            <button type="button" class="btn btn-secondary px-4" id="btnPrev" onclick="navigateStep(-1)">Prev</button>
+            <button type="button" class="btn btn-success px-4" id="btnNext" onclick="navigateStep(1)">Next</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-muted py-3 border-top mt-5">
+      <small>© 2026 Carbon Footprint Calculator Project | Created by Abdulrahman Alogbi 12P</small>
+    </footer>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script>
+    const tabList = ['general', 'home', 'travel', 'food', 'electronics', 'shopping', 'result'];
+    let currentTabIdx = 0;
+
+    function navigateStep(direction) {
+      currentTabIdx += direction;
+      if (currentTabIdx < 0) currentTabIdx = 0;
+      if (currentTabIdx >= tabList.length) currentTabIdx = tabList.length - 1;
+
+      const targetTabId = tabList[currentTabIdx] + '-tab';
+      const tabTrigger = new bootstrap.Tab(document.getElementById(targetTabId));
+      tabTrigger.show();
+
+      if (tabList[currentTabIdx] === 'result') {
+        calculateFootprint();
+      }
+    }
+
+    function calculateFootprint() {
+      const elec = parseFloat(document.getElementById('elecUsage').value) || 0;
+      const car = parseFloat(document.getElementById('carKm').value) || 0;
+      const flights = parseFloat(document.getElementById('flightsCount').value) || 0;
+      const gaming = parseFloat(document.getElementById('gamingHours').value) || 0;
+
+      const total = ((elec * 0.5 * 12) + (car * 52 * 0.2) + (flights * 400) + (gaming * 365 * 0.1)) / 1000;
+      document.getElementById('totalResult').innerText = total.toFixed(2) + " Tons CO₂/year";
+    }
+
+    // Keep active index updated if user clicks tabs directly
+    document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((tabBtn, idx) => {
+      tabBtn.addEventListener('shown.bs.tab', (e) => {
+        currentTabIdx = idx;
+        if (tabList[idx] === 'result') {
+          calculateFootprint();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
